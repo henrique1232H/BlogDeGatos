@@ -171,6 +171,11 @@ footer {
     text-transform: uppercase;
 }
 
+main aside .flexAside img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
 
 @media (min-width: 70rem) {
 
@@ -233,9 +238,7 @@ footer {
         width: auto;
        
     }
-
-    main aside .flexAside img {
-        aspect-ratio: 16/9;
-        object-fit: cover;
+    .aside {
+        margin-top: 2rem;
     }
 }

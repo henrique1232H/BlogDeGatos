@@ -15,4 +15,4 @@ const removeContainer = () => {
 }
 setInterval(() => {
     removeContainer();
-}, 200)
+}, 50)
