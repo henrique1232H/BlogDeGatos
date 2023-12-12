@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color:  #387E96;
+    font-family: "Mulish", sans-serif;
+}
+
+.container {
+    padding: 1.5rem 3.4rem;
+    width: min(112rem, 100%);
+    margin: 0 auto;
+}
+
+#app {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    grid-template-columns: 1fr max-content 1fr;
+}
+
+header {
+    grid-area: header;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+.perfil {
+    height: 5vh;
+    border-radius: 50%;
+}
+
+nav form {
+    flex: 1;
+}
+
+.input-wrapper label {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.input-wrapper input {
+    width: 100%;
+}
+
+input {
+    background: #4d8ea3;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+input::placeholder {
+    opacity: 1;
+    color: #fff;
+}
+
+main {
+    grid-area: main;
+    background-color: #fff;
+}
+
+.mainPhoto {
+    width: 100%;
+    height: 100%;
+    min-height: 10vh;
+    max-height: 50vh;
+    background-size: cover;
+}
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title button {
+    height: auto;
+    width: 10%;
+    border: none;
+    background: none;
+}
+
+.title div {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: start;
+}
+
+main .mainTitle {
+    height: 100vh;
+    overflow-y: scroll;
+
+}
+
+.title div {
+    flex-direction: column;
+}
+
+.paragrafy {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+.flex {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.flexAside {
+    display: flex;
+    gap: 2rem;
+    
+
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+.flexAside p {
+    margin-top: 0.1rem;
+    font-size: 1.4rem;
+}
+
+.title div div {
+    flex-direction: row;
+}
+
+.flexAside img {
+    width: 70%;
+    height: 12vh;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 70rem) {
+
+
+
+    .container {
+        width: min(140rem, 100%);
+    }
+
+    #app {
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        ;
+    }
+
+    .mainPhoto {
+        height: 100vh;
+        margin-top: 2rem;
+    }
+
+
+    main {
+        padding: 0 7rem;
+        display: flex;
+        height: 120vh;
+    }
+
+    main aside {
+
+        width: 25vw;
+    }
+
+    main div .mainTitle {
+        overflow-y: hidden;
+        width: 56vw;
+        height: auto;
+    }
+
+
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title div {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .title div div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: auto;
+       
+    }
+
+    main aside .flexAside img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+}
